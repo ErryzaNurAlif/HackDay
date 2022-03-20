@@ -1,10 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:phonebook/ui/pages/add_contact/add_contact.dart';
 import 'package:phonebook/ui/wigets/contact/contact_list.dart';
 import 'package:phonebook/ui/wigets/label_form/text_form.dart';
 
-class Home extends StatelessWidget {
-  const Home({Key? key}) : super(key: key);
+class Recent extends StatelessWidget {
+  const Recent({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -23,23 +22,12 @@ class Home extends StatelessWidget {
                   // ignore: avoid_unnecessary_containers
                   Container(
                     child: const Text(
-                      'My Contact',
+                      'Recent',
                       style: TextStyle(
                           color: Color(0xff000000),
                           fontSize: 16,
                           fontWeight: FontWeight.w400),
                     ),
-                  ),
-                  IconButton(
-                    icon: const Icon(Icons.add_circle),
-                    onPressed: () {
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                          builder: (context) => const AddContact(),
-                        ),
-                      );
-                    },
                   ),
                 ],
               ),
@@ -70,7 +58,7 @@ class Home extends StatelessWidget {
                   ),
                   SizedBox(height: 10),
                   ContactList(
-                    icon: Icon(Icons.more_horiz),
+                    icon: Icon(Icons.more_horiz_outlined),
                   ),
                 ],
               ),

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:phonebook/ui/pages/detail_contact/detail_contact.dart';
 
 class ContactList extends StatelessWidget {
   final Widget icon;
@@ -38,18 +39,13 @@ class ContactList extends StatelessWidget {
           const Spacer(),
           IconButton(
             icon: icon,
-            // icon: Image.asset(
-            //   'assets/images/lg_more.png',
-            //   width: 22,
-            //   height: 20,
-            // ),
             onPressed: () {
-              // Navigator.push(
-              //   context,
-              //   MaterialPageRoute(
-              //     builder: (context) => const DetailContact(),
-              //   ),
-              // );
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => const DetailContact(),
+                ),
+              );
             },
           ),
         ],

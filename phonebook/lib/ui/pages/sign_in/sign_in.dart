@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:phonebook/ui/pages/sign_up/sign_up.dart';
+import 'package:phonebook/ui/wigets/buttoms/buttom_navi.dart';
 import 'package:phonebook/ui/wigets/buttoms/custom_buttom.dart';
 import 'package:phonebook/ui/wigets/label_form/text_form.dart';
 
@@ -9,7 +10,7 @@ class SignIn extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: const Color(0xff000000),
+      backgroundColor: const Color(0xff05466A),
       body: SafeArea(
         child: Center(
           child: ListView(
@@ -80,12 +81,12 @@ class SignIn extends StatelessWidget {
                 height: 50,
                 nameTitle: 'LOGIN',
                 onClick: () {
-                  // Navigator.push(
-                  //   context,
-                  //   MaterialPageRoute(
-                  //     builder: (_) => const SignUp(),
-                  //   ),
-                  // );
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (_) => const ButtomNavi(),
+                    ),
+                  );
                 },
               ),
             ],

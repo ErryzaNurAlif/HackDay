@@ -7,6 +7,7 @@ class TextForm extends StatelessWidget {
   final Color? fillColor;
   final TextStyle? style;
   final TextStyle? labelStyle;
+  final TextInputType? keyboardType;
 
   const TextForm(
       {Key? key,
@@ -15,7 +16,8 @@ class TextForm extends StatelessWidget {
       required this.obscureText,
       required this.fillColor,
       this.style,
-      this.labelStyle})
+      this.labelStyle,
+      this.keyboardType})
       : super(key: key);
 
   @override
@@ -25,6 +27,7 @@ class TextForm extends StatelessWidget {
       child: TextField(
         style: style,
         obscureText: obscureText,
+        keyboardType: keyboardType,
         decoration: InputDecoration(
           fillColor: fillColor,
           filled: true,
