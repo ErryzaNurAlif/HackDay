@@ -8,6 +8,7 @@ class TextForm extends StatelessWidget {
   final TextStyle? style;
   final TextStyle? labelStyle;
   final TextInputType? keyboardType;
+  final ValueChanged<String>? onChanged;
 
   const TextForm(
       {Key? key,
@@ -17,7 +18,8 @@ class TextForm extends StatelessWidget {
       required this.fillColor,
       this.style,
       this.labelStyle,
-      this.keyboardType})
+      this.keyboardType,
+      this.onChanged})
       : super(key: key);
 
   @override
@@ -38,6 +40,7 @@ class TextForm extends StatelessWidget {
             borderSide: BorderSide.none,
           ),
         ),
+        onChanged: onChanged,
       ),
     );
   }
